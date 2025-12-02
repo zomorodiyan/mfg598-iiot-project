@@ -1,6 +1,7 @@
 import requests
 import random
 import json
+import os
 from datetime import datetime
 
 # Generate 10,000 random temperature values (simulating a 100x100 sensor array)
@@ -16,8 +17,13 @@ payload = {
     "temperatures": temperatures_str
 }
 
+# Create output directory if it doesn't exist
+script_dir = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(script_dir, "telemetry-requests")
+os.makedirs(output_dir, exist_ok=True)
+
 # Save payload to JSON file
-output_filename = f"telemetry_request_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+output_filename = os.path.join(output_dir, f"telemetry_request_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
 with open(output_filename, 'w') as f:
     json.dump(payload, f, indent=2)
 print(f"✅ Request payload saved to: {output_filename}")
