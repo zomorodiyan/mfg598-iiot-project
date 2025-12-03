@@ -34,7 +34,7 @@ async def send_single_telemetry(client, iteration):
     
     # Create output directory if it doesn't exist
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "telemetry-requests")
+    output_dir = os.path.join(script_dir, "test-data", "telemetry-requests")
     os.makedirs(output_dir, exist_ok=True)
     
     # Save payload to JSON file
@@ -104,7 +104,7 @@ async def send_telemetry():
     """
     # Create output directory if it doesn't exist
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "telemetry-requests")
+    output_dir = os.path.join(script_dir, "test-data", "telemetry-requests")
     os.makedirs(output_dir, exist_ok=True)
     
     # Send telemetry via OPC UA
