@@ -40,7 +40,7 @@ print(f"✅ Request payload saved to: {output_filename}")
 print()
 
 # Send POST request to the telemetry endpoint
-url = "http://localhost:8000/telemetry"
+url = "http://localhost:8067/telemetry"
 
 print("Sending telemetry data with 10,000 temperature values...")
 print(f"Machine ID: {payload['machine_id']}")
@@ -60,7 +60,7 @@ try:
     
 except requests.exceptions.ConnectionError:
     print("❌ Error: Could not connect to the server.")
-    print("Make sure the Flask app is running on http://localhost:8000")
+    print("Make sure the Flask app is running on http://localhost:8067")
     print("Run: python app.py")
 except Exception as e:
     print(f"❌ Error: {e}")

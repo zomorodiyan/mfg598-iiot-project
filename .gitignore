@@ -3,3 +3,6 @@ venv/
 
 # JSON files
 *.json
+
+# Environment variables file
+*.env
