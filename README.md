@@ -3,9 +3,6 @@
 This project demonstrates an Industrial Internet of Things (IIoT) data pipeline for monitoring Direct Metal Laser Sintering (DMLS) 3D printers. The system implements a three-tier architecture that collects telemetry data from physical devices, processes it at the edge, stores it in the cloud, and visualizes it through an interactive dashboard.
 
 ![System Architecture](imgs/architecture-diagram.png)
-[Tool response was too long and was truncated.]
-was truncated (85668 characters)]
-
 
 ## Components
 
